@@ -1,0 +1,70 @@
+/* input 숨김 */
+.a11y-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(0,0,0,0);
+    clip-path: polygon(0 0, 0 0, 0 0);
+    overflow: hidden;
+}
+/* 라벨 스타일링 */
+.burgerbar {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    /* background-color: teal; */
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    cursor: pointer;
+    overflow: hidden;
+}
+/* 버거바 스타일링 */
+.burger-bar {
+    width: 100%;
+    height: 20%;
+    background-color: red;
+    position: absolute;
+    left: 0;
+    border-radius: 20px;
+    transition: all 0.4s;
+    z-index: 5;
+}
+.top {
+    top: 0;
+}
+.middle {
+    top: 50%;
+    transform: translateY(-50%);
+}
+.bottom {
+    top: 100%;
+    transform: translateY(-100%);
+}
+/* 버거바 클릭 애니메이션 */
+input:checked + label .top {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+input:checked + label .middle {
+    transform: translate(-105%, -50%);
+}
+input:checked + label .bottom {
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+}
+/* 메뉴 평상시 */
+.menu {
+    background-color: skyblue;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-105%);
+    transition: all 0.5s;
+}
+/* 메뉴  */
+input:checked + label + .menu {
+    transform: none;
+}
