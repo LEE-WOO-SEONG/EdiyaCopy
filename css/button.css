@@ -9,15 +9,15 @@
 }
 /* 라벨 스타일링 */
 .burgerbar {
-    display: inline-block;
-    width: 60px;
-    height: 60px;
+    width: 30px;
+    height: 30px;
     /* background-color: teal; */
     position: absolute;
     top: 5%;
     right: 5%;
     cursor: pointer;
     overflow: hidden;
+    z-index: -1;
 }
 /* 버거바 스타일링 */
 .burger-bar {
@@ -28,7 +28,6 @@
     left: 0;
     border-radius: 20px;
     transition: all 0.4s;
-    z-index: 5;
 }
 .top {
     top: 0;
@@ -42,7 +41,7 @@
     transform: translateY(-100%);
 }
 /* 버거바 클릭 애니메이션 */
-input:checked + label .top {
+/* input:checked + label .top {
     top: 50%;
     transform: translateY(-50%) rotate(45deg);
 }
@@ -52,10 +51,10 @@ input:checked + label .middle {
 input:checked + label .bottom {
     top: 50%;
     transform: translateY(-50%) rotate(-45deg);
-}
+} */
 /* 메뉴 평상시 */
 .menu {
-    background-color: skyblue;
+    background-color: rgba(56,12,34,0.9);
     width: 100%;
     height: 100%;
     position: fixed;
@@ -64,7 +63,34 @@ input:checked + label .bottom {
     transform: translateX(-105%);
     transition: all 0.5s;
 }
-/* 메뉴  */
+.closingbar {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 8%;
+    right: 3%;
+    cursor: pointer;
+}
+.closing-bar{
+    width: 100%;
+    height: 20%;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    border-radius: 20px;
+}
+.closingbar .top {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+.closingbar .bottom {
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+
+}
+/* 메뉴 클릭 시 */
 input:checked + label + .menu {
     transform: none;
 }
+
+
