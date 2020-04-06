@@ -1,0 +1,12 @@
+.drink-infoName{
+    display: block;
+    font-size: 5rem;
+    font-weight: bold;
+    border-bottom: 2px solid black;
+}
+.drink-infoName::after{
+    content: attr(data-enName);
+    font-size: 1rem;
+    color: gray;
+    display: block;
+}
