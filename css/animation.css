@@ -1,0 +1,39 @@
+@keyframes drinkItem {
+    0%{
+        transform: translateY(15%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes logo {
+    0%{
+        transform: translateX(-130%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes menu {
+    0%{
+        transform: translateX(130%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes header {
+    0%{
+        transform: translateY(-15%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
