@@ -19,6 +19,7 @@
 
     width: calc(50% - 20px);
     height: 360px;
+
 }
 
 .btn-infoOpen {
@@ -145,34 +146,6 @@
     height: 40px;
 
     transition: 0.5s;
-}
-
-
-/*애니메이션 설정*/
-.logo{
-    animation: logo 0.5s 1s both;
-}
-.btn-openMenu{
-    animation: menuIcon 0.5s 1s both;
-}
-.header{
-    animation: header 1s both;
-}
-.drink-item{
-    animation: drinkItem 1.2s both;
-    animation-delay: 0.5s;
-}
-.drink-item:nth-child(1){
-    animation-delay: 1s;
-}
-.drink-item:nth-child(2){
-    animation-delay: 1.2s;
-}
-.drink-item:nth-child(3){
-    animation-delay: 1.4s;
-}
-.drink-item:nth-child(4){
-    animation-delay: 1.6s;
 }
 
 @media screen and (max-width: 700px){
