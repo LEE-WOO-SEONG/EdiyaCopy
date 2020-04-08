@@ -1,3 +1,25 @@
+@keyframes menuOpen {
+    0%{
+        visibility: hidden;
+        transform: translateX(105%);
+    }
+    100%{
+        visibility: visible;
+        transform: none;
+    }
+}
+@keyframes menuClose {
+    0%{
+        visibility: visible;
+        transform: none;
+    }
+    100%{
+        visibility: hidden;
+        transform: translateX(105%);
+
+    }
+}
+
 @keyframes drinkItem {
     0%{
         transform: translateY(15%);
@@ -18,7 +40,7 @@
     }
 }
 
-@keyframes menu {
+@keyframes menuIcon {
     0%{
         transform: translateX(130%);
     }

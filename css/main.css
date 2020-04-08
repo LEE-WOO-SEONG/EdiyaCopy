@@ -1,0 +1,183 @@
+
+/*레이아웃*/
+
+.drink-list {
+    max-width: 850px;
+    width: calc(100% - 40px);
+
+
+    margin: 20px auto 50px;
+    display: flex;
+    flex-flow: row wrap;
+
+    justify-content: center;
+}
+
+.drink-item {
+    position: relative;
+    margin: 0 10px 20px;
+
+    width: calc(50% - 20px);
+    height: 360px;
+}
+
+.btn-infoOpen {
+    width: 100%;
+    height: 100%;
+    background: #eee;
+    position: relative;
+}
+
+.btn-infoOpen span {
+    display: block;
+    font-size: 1.6rem;
+}
+.drink-image {
+    transition: transform 0.4s;
+}
+/* 커피메뉴 이미지 애니메이션 */
+.btn-infoOpen:hover .drink-image {
+    transform: scale(1.1);
+}
+
+/* 카페메뉴  */
+.drink-info {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 100%;
+
+    background-color: rgba(255,255,255,0.6);
+
+    display: flex;
+    flex-flow: row wrap;
+
+    border: 1px solid #ccc;
+
+    visibility: hidden;
+    opacity: 0;
+
+    transition: all 0.8s;
+}
+.drink-act .drink-info {
+
+    opacity: 1;
+    visibility: visible;
+}
+
+.drink-infoWrap {
+    width: 100%;
+    padding: 40px 20px 0;
+}
+
+/*음료 소개*/
+.drink-infoName{
+    display: block;
+    font-size: 1.8rem;
+    font-style: normal;
+    border-bottom: 2px solid #202023;
+}
+.drink-infoName::after{
+    content: attr(data-enName);
+    font-size: 1.4rem;
+    color: #999;
+    display: block;
+    margin-bottom: 16px;
+    line-height: 0.9;
+}
+.drink-infoEx{
+    font-size: 1.6rem;
+}
+
+/*음료 성분*/
+.drink-infoCompList {
+    align-self: flex-end;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    height: 95px;
+    font-size: 1.3rem;
+
+    background-color: #f8f8f8;
+
+    padding: 15px 30px;
+}
+.drink-infoCompList::after {
+    content:"";
+    display: block;
+    width: 1px;
+    height: 100%;
+    background-color: #ccc;
+    order: -1;
+}
+.drink-infoCompList div:nth-child(-n+3){
+    order: -2;
+}
+
+.drink-infoCompTerm,
+.drink-infoCompD{
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+/*dt dd width 고정*/
+.drink-infoCompTerm {
+    width: 5em;
+}
+.drink-infoCompD{
+    width: 4em;
+}
+
+
+/* 커피메뉴 닫기 애니메이션 */
+.btn-infoClose {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url(../images/button/Close_2.svg) no-repeat center;
+
+    width: 40px;
+    height: 40px;
+
+    transition: 0.5s;
+}
+
+
+/*애니메이션 설정*/
+.logo{
+    animation: logo 0.5s 1s both;
+}
+.btn-openMenu{
+    animation: menuIcon 0.5s 1s both;
+}
+.header{
+    animation: header 1s both;
+}
+.drink-item{
+    animation: drinkItem 1.2s both;
+    animation-delay: 0.5s;
+}
+.drink-item:nth-child(1){
+    animation-delay: 1s;
+}
+.drink-item:nth-child(2){
+    animation-delay: 1.2s;
+}
+.drink-item:nth-child(3){
+    animation-delay: 1.4s;
+}
+.drink-item:nth-child(4){
+    animation-delay: 1.6s;
+}
+
+@media screen and (max-width: 700px){
+    .drink-item{
+        width: 90%;
+        min-width: 280px;
+    }
+}
