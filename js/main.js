@@ -12,20 +12,20 @@ menuOpen.click(function(e) {
 );
 
 menuClose.click(function(e) {
-    e.preventDefault(); /* anchor 이벤트 발생억제 */
+    e.preventDefault(); /* 이벤트 발생억제 */
     $(this).parent().parent().removeClass('nav-act'); /* 해당 class name을 모두 지우고 */
     $(this).parent().parent().addClass('nav-none');
 }
 );
 
 drinkOpen.click(function(e) {
-    e.preventDefault(); /* anchor 이벤트 발생억제 */
+    e.preventDefault(); /*  이벤트 발생억제 */
     $(this).parent().addClass('drink-act');
 }
 );
 
 drinkClose.click(function(e) {
-    e.preventDefault(); /* anchor 이벤트 발생억제 */
+    e.preventDefault(); /* 이벤트 발생억제 */
     $(this).parent().parent().removeClass('drink-act'); /* 해당 class name을 모두 지우고 */ 
 }
 );
