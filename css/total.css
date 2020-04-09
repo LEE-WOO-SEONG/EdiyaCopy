@@ -7,6 +7,7 @@ body {
     margin: 0;
     color: #0f0f0f;
     overflow-x: hidden;
+    font-family: 'Spoqa Han Sans', sans-serif;
 }
 a {
     text-decoration: none;
@@ -32,6 +33,14 @@ dl{
 }
 dd{
     margin-left: 0;
+}
+/* 드래그 스타일링 */
+body *::selection {
+    background-color: navy;
+    color: #fff;
+}
+img::selection {
+    background-color: transparent;
 }
 /* 리셋 모듈 */
 .resetButton {
