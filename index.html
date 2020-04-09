@@ -3,28 +3,27 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta nmae="author" content="조이름"> <!-- 조이름 적기 -->
+    <meta name="description" content="이디야 커피 웹 페이지 구현 예제입니다.">
+    <meta name="keywords" content="이디야멤버스, 이디야커피랩, 이디야컬쳐랩, 이디야 매장찾기">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>모바일 웹 예제</title>
+    <title>이디야 커피</title>
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/jquery.min.js" defer></script>
     <script src="./js/main.js" defer></script>
-    
 </head>
 
 <body>
     <header class="header">
         <h1 class="logo">
             <a class='logo-link' href="#">
-                <img src="./images/Logo.svg" alt="이디야 카페">
+                <img src="./images/Logo.svg" alt="이디야 커피">
             </a>
         </h1>
-
-
-        <nav class="header-nav">
-            <h2 class="a11y-hidden">메인메뉴</h2>
-            <button class="btn-openMenu resetButton btn-gray ariaButton" title="메뉴 열기" type="button">메뉴 열기</button>
+        <nav class="header-nav" aria-labelledby="nav-menu">
+            <h2 class="a11y-hidden" id="nav-menu">메인 메뉴</h2>
+            <button class="btn-openMenu resetButton btn-gray ariaButton" title="메인메뉴 열기" type="button">메인메뉴 열기</button>
             <div class="menu-container">
                 <ul class="menu-list resetList">
                     <li class="menu-item"><a class="menu-link" href="#">메뉴</a></li>
@@ -34,7 +33,7 @@
                     <li class="menu-item"><a class="menu-link" href="#">공지사항</a></li>
                     <li class="menu-item"><a class="menu-link" href="#">매장찾기</a></li>
                 </ul>
-                <button class="btn-closeMenu resetButton ariaButton" title="메뉴 닫기" type="button">메뉴 닫기</button>
+                <button class="btn-closeMenu resetButton ariaButton" title="메인메뉴 닫기" type="button">메인메뉴 닫기</button>
             </div>
         </nav>
     </header>
@@ -43,9 +42,15 @@
         <h2 class="a11y-hidden">음료리스트</h2>
         <ul class="drink-list resetList">
             <li class="drink-item resetList">
-                <button class="btn-infoOpen resetButton" title="설명 보기" aria-label="설명 보기" type="button">
-                    <img class="drink-image" src="./images/drink/iceCherryBlossomLatte-1x.png" alt="ICED 벚꽃라떼">
-                    <span>ICED 벚꽃라떼</span>
+                <h3 class="a11y-hidden">ICED 벛꽃라떼</h3>
+                <button class="btn-infoOpen resetButton" title="설명 보기" type="button">
+                    <img class="drink-image"
+                    srcset="./images/drink/iceCherryBlossomLatte-1x.png 200w,
+                            ./images/drink/iceCherryBlossomLatte-2x.png 400w" 
+                    src="./images/drink/iceCherryBlossomLatte-1x.png"
+                    width="200px"
+                    alt="ICED 벚꽃라떼 이미지">
+                    <span>ICED 벚꽃라떼</span><span class="a11y-hidden">설명보기</span>
                 </button>
                 <div class="drink-info">
                     <div class="drink-infoWrap">
@@ -78,13 +83,19 @@
                             <dd class="drink-infoCompD">(0mg)</dd>
                         </div>
                     </dl>
-                    <button class="btn-infoClose resetButton btn-gray ariaButton" title="설명 닫기" type="button">설명 닫기</button>
+                    <button class="btn-infoClose resetButton btn-gray ariaButton" title="설명 닫기" aria-label="ICED 벛꽃라떼 설명 닫기" type="button">설명 닫기</button>
                 </div>
             </li>
             <li class="drink-item resetList">
-                <button class="btn-infoOpen resetButton" title="설명 보기" aria-label="설명 보기" type="button">
-                    <img class="drink-image" src="./images/drink/hotCherryBlossomLatte-1x.png" alt="HOT 벚꽃라떼">
-                    <span>HOT 벚꽃라떼</span>
+                <h3 class="a11y-hidden">HOT 벛꽃라떼</h3>
+                <button class="btn-infoOpen resetButton" title="설명 보기" type="button">
+                    <img class="drink-image"
+                    srcset="./images/drink/hotCherryBlossomLatte-1x.png 200w,
+                            ./images/drink/hotCherryBlossomLatte-2x.png 400w" 
+                    src="./images/drink/hotCherryBlossomLatte-1x.png"
+                    width="200px" 
+                    alt="">
+                    <span>HOT 벚꽃라떼</span><span class="a11y-hidden">설명보기</span>
                 </button>
                 <div class="drink-info">
                     <div class="drink-infoWrap">
@@ -117,13 +128,19 @@
                             <dd class="drink-infoCompD">(0mg)</dd>
                         </div>
                     </dl>
-                    <button class="btn-infoClose resetButton btn-gray ariaButton" title="설명 닫기" type="button">설명 닫기</button>
+                    <button class="btn-infoClose resetButton btn-gray ariaButton" title="설명 닫기" aria-label="HOT 벚꽃라떼 설명 닫기" type="button">설명 닫기</button>
                 </div>
             </li>
             <li class="drink-item resetList">
-                <button class="btn-infoOpen resetButton" title="설명 보기" aria-label="설명 보기" type="button">
-                    <img class="drink-image" src="./images/drink/iceBrownieChocolate-1x.png" alt="ICED 브라우니 쇼콜라">
-                    <span>ICED 브라우니 쇼콜라</span>
+                <h3 class="a11y-hidden">ICED 브라우니 쇼콜라</h3>
+                <button class="btn-infoOpen resetButton" title="설명 보기" type="button">
+                    <img class="drink-image"
+                    srcset="./images/drink/iceBrownieChocolate-1x.png 200w,
+                            ./images/drink/iceBrownieChocolate-2x.png 400w" 
+                    src="./images/drink/iceBrownieChocolate-1x.png"
+                    width="200px"
+                    alt="" >
+                    <span>ICED 브라우니 쇼콜라</span><span class="a11y-hidden">설명보기</span>
                 </button>
                 <div class="drink-info">
                     <div class="drink-infoWrap">
@@ -156,13 +173,19 @@
                             <dd class="drink-infoCompD">(0mg)</dd>
                         </div>
                     </dl>
-                    <button class="btn-infoClose resetButton btn-gray ariaButton" title="설명 닫기" type="button">설명 닫기</button>
+                    <button class="btn-infoClose resetButton btn-gray ariaButton" title="설명 닫기" aria-label="ICED 브라우니 쇼콜라 설명 닫기" type="button">설명 닫기</button>
                 </div>
             </li>
             <li class="drink-item resetList">
-                <button class="btn-infoOpen resetButton" title="설명 보기" aria-label="설명 보기" type="button">
-                    <img class="drink-image" src="./images/drink/hotBrownieChocolate-1x.png" alt="HOT 브라우니 쇼콜라">
-                    <span>HOT 브라우니 쇼콜라</span>
+                <h3 class="a11y-hidden">HOT 브라우니 쇼콜라</h3>
+                <button class="btn-infoOpen resetButton" title="설명 보기" type="button">
+                    <img class="drink-image"
+                    srcset="./images/drink/hotBrownieChocolate-1x.png 200w,
+                            ./images/drink/hotBrownieChocolate-2x.png 400w"
+                    src="./images/drink/hotBrownieChocolate-1x.png"
+                    width="200px"
+                    alt="">
+                    <span>HOT 브라우니 쇼콜라</span><span class="a11y-hidden">설명보기</span>
                 </button>
                 <div class="drink-info">
                     <div class="drink-infoWrap">
@@ -195,13 +218,19 @@
                             <dd class="drink-infoCompD">(12mg)</dd>
                         </div>
                     </dl>
-                    <button class="btn-infoClose resetButton btn-gray ariaButton" title="설명 닫기" type="button">설명 닫기</button>
+                    <button class="btn-infoClose resetButton btn-gray ariaButton" title="설명 닫기" aria-label="HOT 브라우니 쇼콜라 설명 닫기" type="button">설명 닫기</button>
                 </div>
             </li>
             <li class="drink-item resetList">
-                <button class="btn-infoOpen resetButton" title="설명 보기" aria-label="설명 보기" type="button">
-                    <img class="drink-image" src="./images/drink/jejuGreenTangerineTea-1x.png" alt="제주청귤 오리지널">
-                    <span>제주청귤 오리지널</span>
+                <h3 class="a11y-hidden">제주청귤 오리지널</h3>
+                <button class="btn-infoOpen resetButton" title="설명 보기" type="button">
+                    <img class="drink-image"
+                    srcset="./images/drink/jejuGreenTangerineTea-1x.png 200w,
+                            ./images/drink/jejuGreenTangerineTea-2x.png 400w"
+                    src="./images/drink/jejuGreenTangerineTea-1x.png" 
+                    width="200px"
+                    alt="" >
+                    <span>제주청귤 오리지널</span><span class="a11y-hidden">설명보기</span>
                 </button>
                 <div class="drink-info">
                     <div class="drink-infoWrap">
@@ -234,13 +263,19 @@
                             <dd class="drink-infoCompD">(0mg)</dd>
                         </div>
                     </dl>
-                    <button class="btn-infoClose resetButton btn-gray ariaButton" title="설명 닫기" type="button">설명 닫기</button>
+                    <button class="btn-infoClose resetButton btn-gray ariaButton" title="설명 닫기" aria-label="제주청귤 오리지널 설명 닫기"  type="button">설명 닫기</button>
                 </div>
             </li>
             <li class="drink-item resetList">
-                <button class="btn-infoOpen resetButton" title="설명 보기" aria-label="설명 보기" type="button">
-                    <img class="drink-image" src="./images/drink/JejuGreenTangerineBlossom-1x.png" alt="제주청귤 블라썸">
-                    <span>제주청귤 블라썸</span>
+                <h3 class="a11y-hidden">제주청귤 블라썸</h3>
+                <button class="btn-infoOpen resetButton" title="설명 보기" type="button">
+                    <img class="drink-image"
+                    srcset="./images/drink/jejuGreenTangerineBlossom-1x.png 200w,
+                            ./images/drink/jejuGreenTangerineBlossom-2x.png 400w" 
+                    src="./images/drink/jejuGreenTangerineBlossom-1x.png"
+                    width="200px"
+                    alt="" >
+                    <span>제주청귤 블라썸</span><span class="a11y-hidden">설명보기</span>
                 </button>
                 <div class="drink-info">
                     <div class="drink-infoWrap">
@@ -273,13 +308,19 @@
                             <dd class="drink-infoCompD">(0mg)</dd>
                         </div>
                     </dl>
-                    <button class="btn-infoClose resetButton btn-gray ariaButton" title="설명 닫기" type="button">설명 닫기</button>
+                    <button class="btn-infoClose resetButton btn-gray ariaButton" title="설명 닫기" aria-label="제주청귤 블라썸 설명 닫기" type="button">설명 닫기</button>
                 </div>
             </li>
             <li class="drink-item resetList">
-                <button class="btn-infoOpen resetButton" title="설명 보기" aria-label="설명 보기" type="button">
-                    <img class="drink-image" src="./images/drinK/pomegranateTea-1x.png" alt="석류 오리지널">
-                    <span>석류 오리지널</span>
+                <h3 class="a11y-hidden">석류 오리지널</h3>
+                <button class="btn-infoOpen resetButton" title="설명 보기" type="button">
+                    <img class="drink-image"
+                    srcset="./images/drink/pomegranateTea-1x.png 200w,
+                            ./images/drink/pomegranateTea-2x.png 400w"
+                    src="./images/drinK/pomegranateTea-1x.png"
+                    width="200px"
+                    alt="석류 오리지널 이미지">
+                    <span>석류 오리지널</span><span class="a11y-hidden">설명보기</span>
                 </button>
                 <div class="drink-info">
                     <div class="drink-infoWrap">
@@ -312,13 +353,19 @@
                             <dd class="drink-infoCompD">(0mg)</dd>
                         </div>
                     </dl>
-                    <button class="btn-infoClose resetButton btn-gray ariaButton" title="설명 닫기" type="button">설명 닫기</button>
+                    <button class="btn-infoClose resetButton btn-gray ariaButton" title="설명 닫기" aria-label="석류 오리지널 설명 닫기" type="button">설명 닫기</button>
                 </div>
             </li>
             <li class="drink-item resetList">
-                <button class="btn-infoOpen resetButton" title="설명 보기" aria-label="설명 보기" type="button">
-                    <img class="drink-image" src="./images/drink/pomegranateAppleLime-1x.png" alt="석류 애플라임">
-                    <span>석류 애플라임</span>
+                <h3 class="a11y-hidden">석류 애플라임</h3>
+                <button class="btn-infoOpen resetButton" title="설명 보기" type="button">
+                    <img class="drink-image" 
+                    srcset="./images/drink/pomegranateAppleLime-1x.png 200w,
+                            ./images/drink/pomegranateAppleLime-2x.png 400w"
+                    src="./images/drink/pomegranateAppleLime-1x.png"
+                    width="200px"
+                    alt="석류 애플라임 이미지">
+                    <span>석류 애플라임</span><span class="a11y-hidden">설명보기</span>
                 </button>
                 <div class="drink-info">
                     <div class="drink-infoWrap">
@@ -351,7 +398,7 @@
                             <dd class="drink-infoCompD">(0mg)</dd>
                         </div>
                     </dl>
-                    <button class="btn-infoClose resetButton btn-gray ariaButton" title="설명 닫기" type="button">설명 닫기</button>
+                    <button class="btn-infoClose resetButton btn-gray ariaButton" title="설명 닫기" aria-label="석류 애플라임 설명 닫기" type="button">설명 닫기</button>
                 </div>
             </li>
         </ul>

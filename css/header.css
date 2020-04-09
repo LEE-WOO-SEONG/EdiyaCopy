@@ -2,7 +2,7 @@
 
 .header {
     position: sticky;
-    /*position: fixed;*/
+    /* position: fixed; */
     top: 0;
     left: 0;
     border-bottom: 1px solid #eee;
@@ -41,6 +41,7 @@
     position: fixed;
     top: 0;
     left: 0;
+    display: inline-block;
 
     width: 100%;
     height: 100vh;
