@@ -1,11 +1,9 @@
 /*레이아웃*/
-
 .drink-list {
     max-width: 850px;
     width: calc(100% - 40px);
 
-
-    margin: 20px auto 50px;
+    margin: 105px auto 50px;
     display: flex;
     flex-flow: row wrap;
 
