@@ -68,6 +68,8 @@
 .drink-infoWrap {
     width: 100%;
     padding: 40px 20px 0;
+    margin: 0;
+    font-size: 1.6rem;
 }
 
 /*음료 소개*/
@@ -75,18 +77,21 @@
     display: block;
     font-size: 1.8rem;
     font-style: normal;
-    border-bottom: 2px solid #202023;
+    /* border-bottom: 2px solid #202023; */
 }
 .drink-infoName::after{
-    content: attr(data-enName);
+    content: attr(data-enname);
     font-size: 1.4rem;
     color: #999;
     display: block;
     margin-bottom: 16px;
+    border-bottom: 2px solid #202023;
 }
-.drink-infoEx{
+/* 본문의 div -> p요소로 수정하였기 때문에 가상요소의 보더를 설정함. */
+
+/* .drink-infoEx{
     font-size: 1.6rem;
-}
+} */
 
 /*음료 성분*/
 .drink-infoCompList {
