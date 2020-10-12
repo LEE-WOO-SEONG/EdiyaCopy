@@ -25,12 +25,16 @@
   position: relative;
 }
 
+.btn-infoOpen:hover .drink-image {
+  transform: scale(1.08);
+}
+
 .btn-infoOpen span {
   display: block;
   font-size: 1.6rem;
 }
 .drink-image {
-  transition: transform 0.4s;
+  transition: transform 0.3s;
 }
 /* 커피메뉴 이미지 애니메이션 */
 /* .btn-infoOpen:hover .drink-image {
