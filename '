@@ -1,0 +1,38 @@
+feat: create favicon dir & add opengraph
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch master
+# Your branch is up to date with 'origin/master'.
+#
+# Changes to be committed:
+#	deleted:    images/Logo.png
+#	new file:   images/favicon.ico/android-icon-144x144.png
+#	new file:   images/favicon.ico/android-icon-192x192.png
+#	new file:   images/favicon.ico/android-icon-36x36.png
+#	new file:   images/favicon.ico/android-icon-48x48.png
+#	new file:   images/favicon.ico/android-icon-72x72.png
+#	new file:   images/favicon.ico/android-icon-96x96.png
+#	new file:   images/favicon.ico/apple-icon-114x114.png
+#	new file:   images/favicon.ico/apple-icon-120x120.png
+#	new file:   images/favicon.ico/apple-icon-144x144.png
+#	new file:   images/favicon.ico/apple-icon-152x152.png
+#	new file:   images/favicon.ico/apple-icon-180x180.png
+#	new file:   images/favicon.ico/apple-icon-57x57.png
+#	new file:   images/favicon.ico/apple-icon-60x60.png
+#	new file:   images/favicon.ico/apple-icon-72x72.png
+#	new file:   images/favicon.ico/apple-icon-76x76.png
+#	new file:   images/favicon.ico/apple-icon-precomposed.png
+#	new file:   images/favicon.ico/apple-icon.png
+#	new file:   images/favicon.ico/browserconfig.xml
+#	new file:   images/favicon.ico/favicon-16x16.png
+#	new file:   images/favicon.ico/favicon-32x32.png
+#	new file:   images/favicon.ico/favicon-96x96.png
+#	new file:   images/favicon.ico/favicon.ico
+#	new file:   images/favicon.ico/manifest.json
+#	new file:   images/favicon.ico/ms-icon-144x144.png
+#	new file:   images/favicon.ico/ms-icon-150x150.png
+#	new file:   images/favicon.ico/ms-icon-310x310.png
+#	new file:   images/favicon.ico/ms-icon-70x70.png
+#	modified:   index.html
+#
